@@ -9,13 +9,13 @@ pipeline {
 
                 // Build Docker image
                 script {
-                    docker.build('realblegend/my-devclass-app:1.0')
+                    sudo docker.build('realblegend/my-devclass-app:1.0')
                 }
 
                 // Log in to Docker Hub
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                        docker.image('realblegend/my-devclass-app:1.0').push()
+                    sudo docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+                        sudo docker.image('realblegend/my-devclass-app:1.0').push()
                     }
                 }
             }
