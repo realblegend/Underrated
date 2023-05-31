@@ -9,7 +9,7 @@ pipeline {
 
                 // Build Docker image
                 script {
-                    docker.build('realblegend/my-devclass-app:1.0', './path/to/Dockerfile')
+                    docker.build('realblegend/my-devclass-app:1.0')
                 }
 
                 // Log in to Docker Hub
