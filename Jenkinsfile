@@ -15,15 +15,4 @@ pipeline {
             }
         }
     }
-
-   post {
-        success {
-            // Push Docker image to Docker Hub
-            script {
-                docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
-                    docker.image('realblegend/my-devclass-app:1.1').push()
-                }
-            }
-        }
-    }
 }
