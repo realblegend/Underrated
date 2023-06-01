@@ -9,7 +9,7 @@ pipeline {
 
                 // Build Docker image
                 script {
-                    sudo docker.build('realblegend/my-devclass-app:1.1')
+                    sudo docker.build('realblegend/my-devclass-app:1.1.2')
                 }
 
             }
